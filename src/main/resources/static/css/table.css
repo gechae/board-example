@@ -1,0 +1,60 @@
+@charset "EUC-KR";
+
+
+/*
+    display 속성 중 table 관련 속성
+    table -> table
+    table-caption -> caption
+    table-cell -> td
+    table-column -> col
+    table-column-group -> colgroup
+    table-footer-group -> tfoot
+    table-header-group -> thead
+    table-row -> tr
+	table-row-group -> tbody
+	출처: https://ghj1001020.tistory.com/650 [혁준 블로그]
+*/
+ html, body {
+	margin: 0;
+	width: 1300px;
+} 
+div {
+	/* position: absolute; */
+	/*  width: 1300px; */
+} 
+
+.table{
+	display: table;
+	width:50%; /* 100% */
+	/* background: */
+}
+.table-row-group{
+	/* min-width: 50%;
+	min-height: 50%; */
+	display: table-row-group;
+	border-bottom : 1px solid #000;
+}
+.table-row {
+	display: table-row;
+}
+.table-cell {
+	display: table-cell;
+	border-bottom : 1px solid #000;
+	text-align : center;
+	vertical-align: middle;
+}
+.table-cell-write{
+	display: table-cell;
+	border: 1px solid #000;
+	/* border-bottom : 1px solid #000; */
+}
+.content{
+	font-weight: bold;
+}
+.table-column-group {
+	display: table-column-group;
+}
+.table-column {
+	display: table-column;
+}
+
