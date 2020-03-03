@@ -35,6 +35,7 @@
 					<textarea rows=30% cols=100% id="context" name="context" style="width:100%" >${param.context}</textarea>
 			</div>
 			<div class="toolbar">
+				<input type="hidden" name="views" value="${param.views}">
 				<input type="submit" value="등록">
 			</div>
 		</form>

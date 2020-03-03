@@ -29,6 +29,7 @@
 			<div class="toolbar">				
 				<input type="hidden" name="title" value="${board.board_title}">
 				<input type="hidden" name="nicname" value="${board.board_un}">
+				<input type="hidden" name="views" value="${board.board_views}">
 				
 				<input type="submit" value="수정" >
 				<input type="submit" value="삭제" formaction=/delete >			

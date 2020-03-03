@@ -45,13 +45,18 @@ public class boardController {
 	
 	@RequestMapping(value="/writeDB", method = RequestMethod.GET)
 	public String writeDB(HttpServletRequest req, RedirectAttributes red) {
-		Board board=enWrapper.writeBoard(req.getParameter("title"),req.getParameter("context"), req.getParameter("nicname"));
+		Board board = null;
+		System.out.println("View : " + req.getParameter("views"));
+		if (req.getParameter("views").isEmpty())
+			board=enWrapper.writeBoard(req.getParameter("title"),req.getParameter("context"), req.getParameter("nicname"));
+		else
+			board=enWrapper.writeBoard(req.getParameter("title"),req.getParameter("context"), req.getParameter("nicname"),Integer.parseInt(req.getParameter("views")));
 		//ModelAndView mv = new ModelAndView();
 
 		//redirectAttributes.addAttribute("board",board);
 		//red.addFlashAttribute("board",board);
 		//mv.setViewName("redirect:/view");
-		return "redirect:/board";
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value="/view", method = RequestMethod.GET)
@@ -68,7 +73,7 @@ public class boardController {
 		System.out.println("delete nicname : " + request.getParameter("nicname")  + ", context : " + request.getParameter("context"));
 		enWrapper.deleteBoard(request.getParameter("nicname"));
 		
-		return "redirect:/board";
+		return "redirect:/";
 	}
 	
 	@RequestMapping(value="/login", method= RequestMethod.GET) 

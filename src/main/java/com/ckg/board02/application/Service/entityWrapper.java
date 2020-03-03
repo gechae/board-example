@@ -24,6 +24,15 @@ public class entityWrapper {
 		board.setBoard_un(name);
 		return board = query.WriteBoard(board);
 	}
+	public Board  writeBoard (String title, String context, String name, int views) {
+		Board board = new Board();
+		//board.setBoard_id((long)1);
+		board.setBoard_contexts(context);
+		board.setBoard_title(title);
+		board.setBoard_views((long) views);
+		board.setBoard_un(name);
+		return board = query.WriteBoard(board);
+	}
 	
 	public Board readBoard (String name) {
 		System.out.println("readBoard : " + name);
